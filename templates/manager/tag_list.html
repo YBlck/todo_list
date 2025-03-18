@@ -19,23 +19,23 @@
   </colgroup>
   <thead>
     <tr>
-      <th>Name</th>
-      <th class="text-right">Update</th>
-      <th class="text-right">Delete</th>
+      <th class="text-muted">Name</th>
+      <th class="text-muted">Update</th>
+      <th class="text-muted">Delete</th>
     </tr>
   </thead>
   <tbody>
     {% for tag in tag_list %}
       <tr>
         <td><strong>{{ tag.name }}</strong></td>
-        <td class="text-right">
+        <td>
           <a href="{% url 'manager:tag-update' pk=tag.id %}">
             <button type="button" class="btn btn-secondary">Update</button>
           </a>
         </td>
         <td>
           <a href="{% url 'manager:tag-delete' pk=tag.id %}">
-            <button type="button" class="btn btn-secondary">Delete</button>
+            <button type="button" class="btn btn-danger">Delete</button>
           </a>
         </td>
       </tr>
